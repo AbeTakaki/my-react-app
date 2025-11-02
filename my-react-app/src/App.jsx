@@ -4,6 +4,7 @@ import Layout from './components/Layout'
 import DisplayValue from './components/DisplayValue'
 import TermsAgreementForm from './components/TermsAgreementForm'
 import Counter from './components/Counter'
+import ReducerCounter from './components/ReducerCounter'
 
 const Button = ({onClick, href, children}) => {
   const style = {
@@ -70,6 +71,7 @@ function App() {
         <DisplayValue />
         <TermsAgreementForm />
         <Counter />
+        <ReducerCounter />
         {contents.map((content) => (<Content key={content.id} {...content} />))}
       </Layout>
     </div>
