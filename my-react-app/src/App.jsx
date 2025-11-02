@@ -1,24 +1,35 @@
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Content from './components/Content'
 
 function App() {
+  const contents = [
+    {
+      id: "jsx",
+      title: "JSX",
+      description: "JSX について解説を行います。",
+    },
+    {
+      id: "component",
+      title: "コンポーネント",
+      description: "コンポーネントについて解説を行います。",
+    },
+    {
+      id: "event",
+      title: "イベント",
+      description: "イベントについて解説を行います。",
+    },
+  ];
+
   return (
     <div>
-      {/* ヘッダー */}
       <Header />
-
-      {/* コンテンツ */}
       <main>
-        <h2 id='jsx'>JSX</h2>
-        <p>JSX について解説を行います。</p>
-        <h2 id='component'>コンポーネント</h2>
-        <p>コンポーネントについて解説を行います。</p>
-        <h2 id='event'>イベント</h2>
-        <p>イベントについて解説を行います。</p>
+        {contents.map((content) => (
+          <Content key={content.id} {...content} />
+        ))}
       </main>
-
-      {/* フッター */}
       <Footer />
     
     </div>
