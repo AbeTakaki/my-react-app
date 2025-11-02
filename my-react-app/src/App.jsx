@@ -1,6 +1,7 @@
 import './App.css'
 import Content from './components/Content'
 import Layout from './components/Layout'
+import DisplayValue from './components/DisplayValue'
 
 const Button = ({onClick, href, children}) => {
   const style = {
@@ -64,9 +65,9 @@ function App() {
       <Layout>
         <Button onClick={handleClick}>クリックしてね</Button>
         <Button href={href}>公式サイトへ</Button>
+        <DisplayValue />
         {contents.map((content) => (<Content key={content.id} {...content} />))}
       </Layout>
-      
     </div>
   )
 }
