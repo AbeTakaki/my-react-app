@@ -3,6 +3,7 @@ import Content from './components/Content'
 import Layout from './components/Layout'
 import DisplayValue from './components/DisplayValue'
 import TermsAgreementForm from './components/TermsAgreementForm'
+import Counter from './components/Counter'
 
 const Button = ({onClick, href, children}) => {
   const style = {
@@ -68,6 +69,7 @@ function App() {
         <Button href={href}>公式サイトへ</Button>
         <DisplayValue />
         <TermsAgreementForm />
+        <Counter />
         {contents.map((content) => (<Content key={content.id} {...content} />))}
       </Layout>
     </div>
