@@ -1,7 +1,6 @@
 import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
 import Content from './components/Content'
+import Layout from './components/Layout'
 
 function App() {
   const contents = [
@@ -24,14 +23,9 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <main>
-        {contents.map((content) => (
-          <Content key={content.id} {...content} />
-        ))}
-      </main>
-      <Footer />
-    
+      <Layout>
+        {contents.map((content) => (<Content key={content.id} {...content} />))}
+      </Layout>
     </div>
   )
 }
