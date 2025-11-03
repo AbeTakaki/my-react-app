@@ -7,6 +7,7 @@ import Counter from './components/Counter'
 import ReducerCounter from './components/ReducerCounter'
 import TaskApp from './components/TaskApp'
 import ReducerTaskApp from './components/ReducerTaskApp'
+import VideoPlayer from './components/VideoPlayer'
 
 const Button = ({onClick, href, children}) => {
   const style = {
@@ -76,6 +77,7 @@ function App() {
         <ReducerCounter />
         <TaskApp />
         <ReducerTaskApp />
+        <VideoPlayer />
         {contents.map((content) => (<Content key={content.id} {...content} />))}
       </Layout>
     </div>
