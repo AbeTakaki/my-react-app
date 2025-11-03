@@ -8,6 +8,8 @@ import ReducerCounter from './components/ReducerCounter'
 import TaskApp from './components/TaskApp'
 import ReducerTaskApp from './components/ReducerTaskApp'
 import VideoPlayer from './components/VideoPlayer'
+import Timer from './components/Timer'
+import WindowSize from './components/WindowSize'
 
 const Button = ({onClick, href, children}) => {
   const style = {
@@ -78,6 +80,8 @@ function App() {
         <TaskApp />
         <ReducerTaskApp />
         <VideoPlayer />
+        <Timer />
+        <WindowSize />
         {contents.map((content) => (<Content key={content.id} {...content} />))}
       </Layout>
     </div>
