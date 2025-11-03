@@ -1,6 +1,6 @@
 import { ThemedBox } from "./ThemedBox";
 
-export const Content = ({ children, theme }) => {
+export const Content = ({ children}) => {
   return (
     <main
       style={{
@@ -12,7 +12,7 @@ export const Content = ({ children, theme }) => {
       }}
     >
       {children}
-      <ThemedBox theme={theme} />
+      <ThemedBox  />
     </main>
   );
 };

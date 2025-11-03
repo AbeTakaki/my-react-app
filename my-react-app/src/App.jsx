@@ -1,21 +1,17 @@
-import { useState } from "react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Content } from "./components/Content";
+import { ThemeProvider } from "./providers/ThemeProvider";
 
 const App = () => {
-  // アプリケーション全体で利用するテーマの状態を定義
-  const [theme, setTheme] = useState("light");
-
+  // ThemeProviderのContextにアクセスしたいコンポーネントを囲む
   return (
-    <div>
-      <Header theme={theme} setTheme={setTheme} />
-      <Content theme={theme}>
-        <p>これはコンテンツエリアです。</p>
-      </Content>
-      <Footer theme={theme} />
-    </div>
+    <ThemeProvider>
+      <Header />
+      <Content>メインコンテンツが入ります</Content>
+      <Footer />
+    </ThemeProvider>
   );
-};
+}
 
 export default App;

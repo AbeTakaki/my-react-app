@@ -1,4 +1,9 @@
-export const Footer = ({ theme }) => {
+import { useContext } from "react";
+import { ThemeContext } from "../providers/ThemeProvider";
+
+export const Footer = () => {
+  const { theme } = useContext(ThemeContext);
+
   // テーマの状態によって色が切り替わる
   const backgroundColor = theme === "light" ? "#ddd" : "#403a3a";
 
